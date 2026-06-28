@@ -14,6 +14,9 @@ setTimeout(() => {
 
 someAsyncOperation(() => {
   const startCallback = Date.now();
-
-  while (Date.now() - startCallback < 10) {}
+  let count = 0;
+  while (Date.now() - startCallback < 10) {
+    count += 1;
+    console.log(count);
+  }
 });
