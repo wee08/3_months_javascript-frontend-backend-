@@ -24,6 +24,10 @@ console.log(myMother);
 Person.prototype.name = function () {
   return this.firstname + " " + this.lastname;
 };
+\
+// Person.prototype.name = () => {
+//   return this.firstname + " " + this.lastname;
+// };
 
 const myGirlfriend = new Person("Mey", "Kimheng", 20, "Light brown");
 
