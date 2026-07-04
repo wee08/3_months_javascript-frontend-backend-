@@ -9,23 +9,28 @@ character.prototype.attack = function (attack_damage) {
 character.prototype.heal = function (heal_hp) {
   return (this.hp += heal_hp);
 };
+character.prototype.warrior = function (weapon) {
+  this.weapon = weapon;
+};
+
 character.prototype.showStatus = function () {
   const name = this.name;
   const hp = this.hp;
   const level = this.level;
-  return { name, hp, level };
+  const weapon = this.weapon;
+  return { name, hp, level, weapon };
 };
 
-function worrior(name, weapon, damage) {
-  this.name = name;
-  this.weapon = weapon;
-  this.damage = damage;
-}
-
 const bob = new character("bob", 100, 10);
+bob.warrior(null);
 console.log(bob.attack(12));
 console.log(bob.heal(10));
 console.log(bob.showStatus());
 
-const thor = new worrior("thor", "hammer", 40);
-console.log(thor);
+const thor = new character("thor", 120, 10);
+thor.warrior("Hammer");
+console.log(thor.attack(30));
+console.log(thor.heal(5));
+console.log(thor.showStatus());
+
+console.log(thor.showStatus());
