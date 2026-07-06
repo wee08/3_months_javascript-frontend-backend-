@@ -26,3 +26,11 @@ console.log(x);
 ("use strict");
 let y = this;
 console.log(y);
+
+// the gloable object si the top level object in a javascript environment
+// - in browser, it is window
+// - in nodejs it is global
+// - in web workers it is self
+
+// globalThis = window;
+// globalThis = global;
