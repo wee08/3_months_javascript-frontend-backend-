@@ -12,6 +12,12 @@ character.prototype.heal = function (heal_hp) {
 character.prototype.warrior = function (weapon) {
   this.weapon = weapon;
 };
+character.prototype.human = function () {};
+
+character.prototype.hero = function (damage, skill) {
+  this.damage = damage;
+  this.skill = skill;
+};
 
 character.prototype.showStatus = function () {
   const name = this.name;
