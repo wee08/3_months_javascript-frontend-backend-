@@ -23,3 +23,6 @@ console.log(myFunction1());
 // this alone
 let x = this;
 console.log(x);
+("use strict");
+let y = this;
+console.log(y);
