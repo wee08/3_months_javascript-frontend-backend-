@@ -12,3 +12,9 @@ function myFunction() {
   return this;
 }
 console.log(myFunction());
+
+("use strict");
+function myFunction1() {
+  return this;
+}
+console.log(myFunction1());
