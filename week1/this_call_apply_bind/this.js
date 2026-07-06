@@ -7,3 +7,8 @@ const person = {
 };
 
 console.log(person.fullName());
+
+function myFunction() {
+  return this;
+}
+console.log(myFunction());
