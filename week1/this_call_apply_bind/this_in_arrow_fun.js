@@ -6,3 +6,13 @@ const person = {
 };
 
 console.log(person.sayHello());
+
+const person_1 = {
+  firstName: "Sean",
+  sayHello: function () {
+    return () => this.firstName;
+  },
+};
+
+let hello = person_1.sayHello();
+console.log(hello());
