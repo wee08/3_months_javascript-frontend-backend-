@@ -10,3 +10,10 @@ const person1 = {
 };
 const dara = person.fullName.call(person1, "Dara", "limg");
 console.log(dara);
+// call() vs normal function call
+function showName() {
+  return this.name;
+}
+const person2 = { name: "jonh" };
+showName();
+console.log(showName.call(person2));
