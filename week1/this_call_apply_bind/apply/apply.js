@@ -44,3 +44,19 @@ for (const n of nums) {
 
 console.log(max1);
 console.log(min1);
+
+function minOfArray(arr) {
+  let min = Infinity;
+  const QUANTUM = 32768;
+  for (let i = 0; i < arr.length; i += QUANTUM) {
+    const subMin = Math.min.apply(
+      null,
+      arr.slice(i, Math.min(i + QUANTUM, arr.length)),
+    );
+    min = Math.min(subMin, min);
+  }
+  return min;
+}
+
+const min2 = minOfArray([120, -1, 0, -0, 20, 10]);
+console.log(min2);
