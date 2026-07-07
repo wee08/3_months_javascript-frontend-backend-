@@ -24,3 +24,4 @@ function sayHello() {
 }
 const person3 = { name: "joson" };
 console.log(sayHello.call(person3));
+// call() runs immediately, doesn't return resusable function
