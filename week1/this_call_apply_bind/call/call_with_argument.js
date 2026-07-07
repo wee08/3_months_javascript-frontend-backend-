@@ -17,3 +17,10 @@ function showName() {
 const person2 = { name: "jonh" };
 showName();
 console.log(showName.call(person2));
+
+// call() does not create a new function
+function sayHello() {
+  return "hello " + this.name;
+}
+const person3 = { name: "joson" };
+console.log(sayHello.call(person3));
