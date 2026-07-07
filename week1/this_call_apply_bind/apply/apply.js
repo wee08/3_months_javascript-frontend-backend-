@@ -15,6 +15,7 @@ console.log(min);
 //   return anotherFn(...args);
 // }
 
+// Using apply() to append an array to another
 const array = ["a", "b"];
 const elements = [0, 1, 2];
 // array.push.apply(array, elements);
@@ -22,3 +23,24 @@ console.log(array);
 
 array.push(...elements);
 console.log(array);
+
+//Using apply() and built-in functions
+
+const nums = [120, 22, 34, 68];
+let max1 = Math.max.apply(null, nums);
+let min1 = Math.min.apply(null, nums);
+
+max1 = -Infinity;
+min1 = Infinity;
+
+for (const n of nums) {
+  if (n > max1) {
+    max1 = n;
+  }
+  if (n < min1) {
+    min1 = n;
+  }
+}
+
+console.log(max1);
+console.log(min1);
