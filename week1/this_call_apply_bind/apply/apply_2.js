@@ -12,3 +12,5 @@ console.log(greet.apply(person3, greetMessages));
 
 console.log(greet.call(person1, "sup"));
 console.log(greet.apply(person1, ["sup"]));
+// call passes arguments seperately
+// apply passes arguments as an arrasy
