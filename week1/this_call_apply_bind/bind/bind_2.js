@@ -18,3 +18,13 @@ function multiply(a, b) {
 }
 const double = multiply.bind(null, 2);
 console.log(double(5));
+
+// bind() does not change the original function
+
+const greetJonh = greet.bind({ name: "jonh" });
+const greetNanan = greet.bind({ name: "Nana" });
+// note
+// common mistake
+// expected bind() to calls the function bind() does not execute the function
+// forgetting to call the returned function, you must call the new function yourself
+// overusing bind(), sometimes a normal function call is simpler
