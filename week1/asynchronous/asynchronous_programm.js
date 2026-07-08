@@ -24,5 +24,15 @@ function myFirst() {
 function mySecond() {
   myDisplay("Goodbye");
 }
-myFirst();
 mySecond();
+myFirst();
+
+// blocking code
+// while javascript is busy, it cannot respond to button clicks, keyboard input or other events
+
+function wait() {
+  let i = 2e9;
+  while (--i > 0);
+}
+wait();
+myDisplay("Done!");
