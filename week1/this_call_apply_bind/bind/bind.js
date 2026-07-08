@@ -36,3 +36,13 @@ console.log(fullName());
 // call() calls a function immediately
 // apply() calls a function immediately
 // bind() return new functoin
+
+// comparison
+
+// call a function
+console.log(greet.call(person1));
+console.log(greet.apply(person1));
+const greetLater = greet.bind(person1);
+
+greetLater();
+console.log(greetLater());
