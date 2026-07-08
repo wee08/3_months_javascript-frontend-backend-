@@ -30,3 +30,9 @@ let fullName = person.fullName.bind(member);
 // call function name
 fullName();
 console.log(fullName());
+
+// bind() vs call() vs apply()
+// the different between these methods is important:
+// call() calls a function immediately
+// apply() calls a function immediately
+// bind() return new functoin
