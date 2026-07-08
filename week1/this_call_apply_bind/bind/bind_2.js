@@ -3,8 +3,10 @@ const person = {
   firstName: "Jonh",
   lastName: "Doe",
   display: function () {
-    return this.firstName + " " + this.lastName;
+    console.log(this.firstName + " " + this.lastName);
   },
 };
 person.display();
 console.log(person.display());
+
+setTimeout(person.display, 3000);
