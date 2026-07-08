@@ -59,3 +59,7 @@ const cat = {
 const hello = cat.sayHello;
 hello();
 console.log(hello());
+
+const hi = cat.sayHello.bind(cat);
+hi();
+console.log(hi());
