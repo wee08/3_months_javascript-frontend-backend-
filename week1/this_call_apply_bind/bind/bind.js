@@ -46,3 +46,16 @@ const greetLater = greet.bind(person1);
 
 greetLater();
 console.log(greetLater());
+
+// bind() for function called later
+
+const cat = {
+  name: "Leo",
+  sayHello: function () {
+    return "HELLO " + this.name;
+  },
+};
+
+const hello = cat.sayHello;
+hello();
+console.log(hello());
