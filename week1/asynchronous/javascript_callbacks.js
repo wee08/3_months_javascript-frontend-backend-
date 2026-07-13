@@ -64,3 +64,19 @@ function myCalculation(a, b) {
 
 let result2 = myCalculation(12, 12);
 display(result2);
+/*
+summary
+- callback function is a function passed to another function
+- callbacks can be synchronous or asynchronous
+- the callback itself does not make code asynchronous
+- Many javascript methods use synchronous callback
+- asynchronous APIs often use callbacks to handle results
+- promises and async / await build on the same idea while making        asynchronous code easier to write
+
+Callback is Not Asynchronous
+A callback is just a function.
+It may be called immediately (like map() or sort()).
+It may be called later by an asynchronous API (like setTimeout() or fetch()).
+The API (not the callback) is what introduces the asynchronous behavior.
+
+*/
