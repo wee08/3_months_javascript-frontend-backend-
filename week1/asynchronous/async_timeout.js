@@ -10,3 +10,9 @@ setTimeout(function () {
 function myFunction1(value) {
   console.log(value);
 }
+// when using the setInterval() method, you can specify function to be executed for each interval
+setInterval(myFunction2, 1000);
+function myFunction2() {
+  let d = new Date();
+  console.log(d.getHours() + " : " + d.getMinutes() + " : " + d.getSeconds());
+}
