@@ -33,3 +33,15 @@ console.log(result1);
 
 // the callback idea
 // the solution to the problem above, is to give js a callback function to call after the result is ready, a callback is a function passed as an argument to another function, this technique allows a function to call another function
+
+function done(value) {
+  console.log(value);
+}
+
+setTimeout(function () {
+  done(120);
+}, 1000); // 120 cuz the callback run later before the timeout so the data can resign to the parameter
+
+setTimeout(function () {
+  console.log("Finished");
+}, 1000);
