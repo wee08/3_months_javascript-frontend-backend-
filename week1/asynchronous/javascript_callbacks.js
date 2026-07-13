@@ -25,3 +25,8 @@ console.log(result);
 // we have: forEach(), map(), filter(), reduce() and sort() : callback called, non-asynchronous
 
 // timing problem
+let result1;
+setTimeout(function () {
+  result1 = 5;
+}, 1000);
+console.log(result1);
