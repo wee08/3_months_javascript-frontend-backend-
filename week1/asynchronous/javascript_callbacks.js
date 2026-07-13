@@ -49,4 +49,18 @@ setTimeout(function () {
 // event handling
 // call back are often used in javascript, especially in event handling: user interactions, such as button clicks or key presses, can be handled by providing a callback function to an event listener
 
-// document.getElementById("myButton").addEventListener("click",displayDate)
+// document.getElementById("myButton").addEventListener("click",displayDate);
+
+// sequence control
+// sometime you whould like to have better control over when to execute a function
+
+function display(string) {
+  console.log(string);
+}
+function myCalculation(a, b) {
+  let sum = a + b;
+  return sum;
+}
+
+let result2 = myCalculation(12, 12);
+display(result2);
