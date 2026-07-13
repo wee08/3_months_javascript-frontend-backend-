@@ -20,3 +20,8 @@ function add(a, b) {
 }
 let result = calculate(3, 4, add);
 console.log(result);
+
+// built-in synchronous callbacks
+// we have: forEach(), map(), filter(), reduce() and sort() : callback called, non-asynchronous
+
+// timing problem
