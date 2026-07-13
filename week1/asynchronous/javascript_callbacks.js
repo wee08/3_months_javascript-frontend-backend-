@@ -30,3 +30,6 @@ setTimeout(function () {
   result1 = 5;
 }, 1000);
 console.log(result1);
+
+// the callback idea
+// the solution to the problem above, is to give js a callback function to call after the result is ready, a callback is a function passed as an argument to another function, this technique allows a function to call another function
