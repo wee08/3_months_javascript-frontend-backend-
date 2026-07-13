@@ -16,3 +16,19 @@ function myFunction2() {
   let d = new Date();
   console.log(d.getHours() + " : " + d.getMinutes() + " : " + d.getSeconds());
 }
+
+// common confusion
+function myDisplay(string) {
+  console.log(string);
+}
+myDisplay("A");
+setTimeout(function () {
+  myDisplay("B");
+}, 1000);
+myDisplay("C");
+
+let result;
+setTimeout(function () {
+  result = 5;
+}, 1000);
+console.log(result);
