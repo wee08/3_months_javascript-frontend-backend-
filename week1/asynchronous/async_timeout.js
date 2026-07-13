@@ -4,3 +4,9 @@ setTimeout(myFunction, 3000);
 function myFunction() {
   console.log("setTimeout");
 }
+setTimeout(function () {
+  myFunction1("setTimeout");
+}, 3000);
+function myFunction1(value) {
+  console.log(value);
+}
