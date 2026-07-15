@@ -55,12 +55,26 @@ promise
 // then() method
 // then() method registers a function that handles a fulfield promise
 
-fetch(
-  "https://www.w3schools.com/js/tryit.asp?filename=tryjs_async_promise_then",
-)
+fetch("fetch.txt")
   .then(function (response) {
     return response.text();
   })
   .then(function (text) {
     console.log(text);
+  });
+// catch() method
+// catch() method registers a function that handles a rejected promise.
+
+fetch("missing.txt")
+  .then(function (response) {
+    if (!response.ok) {
+      throw new Error(response.statusText);
+    }
+    return response.text();
+  })
+  .then(function (text) {
+    console.log(text);
+  })
+  .catch(function (error) {
+    console.log(error);
   });
