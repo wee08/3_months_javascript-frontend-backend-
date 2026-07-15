@@ -55,17 +55,17 @@ promise
 // then() method
 // then() method registers a function that handles a fulfield promise
 
-fetch("fetch.txt")
-  .then(function (response) {
-    return response.text();
-  })
-  .then(function (text) {
-    console.log(text);
-  });
+// fetch("fetch.txt")
+//   .then(function (response) {
+//     return response.text();
+//   })
+//   .then(function (text) {
+//     console.log(text);
+//   });
 // catch() method
 // catch() method registers a function that handles a rejected promise.
 
-fetch("missing.txt")
+fetch("missig.com")
   .then(function (response) {
     if (!response.ok) {
       throw new Error(response.statusText);
@@ -76,5 +76,5 @@ fetch("missing.txt")
     console.log(text);
   })
   .catch(function (error) {
-    console.log(error);
+    console.log(error.message);
   });
