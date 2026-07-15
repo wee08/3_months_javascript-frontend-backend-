@@ -129,6 +129,22 @@ async function run() {
 }
 
 run();
+const url =
+  "https://l.facebook.com/l.php?u=https%3A%2F%2Fvt.tiktok.com%2FZSXkK4vUF%2F%3Ffbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExM0l1MjRENkEwUmM4SDVvbXNydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR7IoQ08EUvMRhCj9BaLLrTHDlfx2efp_3bNigyH0KzOkDGzXh4x5YFhtRwV_g_aem_JMaFErPWvgm8D_02sf2SCA&h=AUAikTOmfyorin-zQdfULPQgTQyIEe5vF8yDXH1UPxAqFW-i2pBSZgVINHloWdEiz7givvfFNMn5tb5AYmlLYFPDC5Knwu8nAoNsLj7ox-_DtK-zcQC9PVVY74V-Im4";
+fetch(url)
+  .then(function (response) {
+    return response.text();
+  })
+  .then(function (text) {
+    console.log(text);
+  })
+  .catch(function (error) {
+    console.log(error.message);
+  })
+  .finally(function () {
+    console.log("Finished!");
+  });
+
 /*
 summary
     - a promise represents the future result of an asynchronous operation
