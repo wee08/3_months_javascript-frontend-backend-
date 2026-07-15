@@ -51,3 +51,16 @@ promise
   .catch(function (error) {
     console.log(error);
   });
+
+// then() method
+// then() method registers a function that handles a fulfield promise
+
+fetch(
+  "https://www.w3schools.com/js/tryit.asp?filename=tryjs_async_promise_then",
+)
+  .then(function (response) {
+    return response.text();
+  })
+  .then(function (text) {
+    console.log(text);
+  });
