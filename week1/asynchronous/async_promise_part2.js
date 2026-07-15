@@ -92,3 +92,40 @@ fetch("sth.com")
   .finally(function () {
     console.log("Finished");
   });
+
+// promise changing
+function step1() {
+  return Promise.resolve("A");
+}
+function step2(value) {
+  return Promise.resolve(value + "B");
+}
+function step3(value) {
+  return Promise.resolve(value + "C");
+}
+step1()
+  .then(function (value) {
+    return step2(value);
+  })
+  .then(function (value) {
+    return step3(value);
+  })
+  .then(function (value) {
+    console.log(value);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+
+async function run() {
+  try {
+    const a = await step1();
+    const b = await step2(a);
+    const c = await step3(b);
+    console.log(c);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+run();
