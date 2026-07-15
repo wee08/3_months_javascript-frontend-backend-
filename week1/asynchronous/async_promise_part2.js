@@ -78,3 +78,17 @@ fetch("missig.com")
   .catch(function (error) {
     console.log(error.message);
   });
+// finally() method
+fetch("sth.com")
+  .then(function (response) {
+    return response.text();
+  })
+  .then(function (text) {
+    console.log(text);
+  })
+  .catch(function (error) {
+    console.log(error.message);
+  })
+  .finally(function () {
+    console.log("Finished");
+  });
