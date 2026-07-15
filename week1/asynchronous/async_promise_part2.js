@@ -22,15 +22,32 @@
 
 // console.log("js continue ... ");
 
-const promise = new Promise(function (resolve, reject) {
-  let sucess = true;
-  if (sucess) {
-    resolve("value");
-  } else {
-    reject("error");
-  }
-});
+// const promise = new Promise(function (resolve, reject) {
+//   let sucess = true;
+//   if (sucess) {
+//     resolve("value");
+//   } else {
+//     reject("error");
+//   }
+// });
 
 // param
 // resolve - fulfills the promise with a value,
 // reject - rejects the promise with an error
+
+const promise = new Promise(function (resolve, reject) {
+  const success = false;
+
+  if (success) {
+    resolve("operation completed");
+  } else {
+    reject("operation failed");
+  }
+});
+promise
+  .then(function (value) {
+    console.log(value);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
