@@ -129,3 +129,13 @@ async function run() {
 }
 
 run();
+/*
+summary
+    - a promise represents the future result of an asynchronous operation
+    - a promise is either pending, fulfilled, or rejected
+    - then() registers fulfillment handlers.
+    - catch() registers rejection handlers
+    - finally() registers a handler that run when the Promise sattles
+    - return Promises from then() to keep promise chains in the correct order
+    - most javascript APIs, including fetch(), return Promises
+*/
